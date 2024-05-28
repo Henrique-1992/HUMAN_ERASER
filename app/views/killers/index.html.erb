@@ -1,2 +1,13 @@
-<h1>Killers#index</h1>
-<p>Find me in app/views/killers/index.html.erb</p>
+<div class="container">
+  <h1>Select an eraser</h1>
+  <% @killers.each do |killer| %>
+  <div class="card" style="width: 18rem;">
+    <img src="<%= killer.img_url %>" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
+    <div class="card-body">
+      <h4 class="card-title">Name: <%= "#{killer.first_name} #{killer.last_name}" %></h4>
+      <p class="card-text"><%= killer.description %></p>
+      <a href="#" class="card-link">Book <%= killer.first_name %></a>
+    </div>
+  </div>
+  <% end %>
+</div>
