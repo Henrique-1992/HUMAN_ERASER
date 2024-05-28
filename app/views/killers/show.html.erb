@@ -1,2 +1,7 @@
-<h1>Killers#show</h1>
-<p>Find me in app/views/killers/show.html.erb</p>
+<h1><%= @killer.first_name %>
+  <%= @killer.last_name %></h1>
+  <div class="container">
+    <div class="card-text"><%= @killer.description %></div>
+  </div>
+
+  <%# create a link from index to the show page %>
