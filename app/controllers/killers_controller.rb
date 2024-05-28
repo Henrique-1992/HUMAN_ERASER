@@ -1,6 +1,7 @@
 class KillersController < ApplicationController
   before_action :set_killer, only: :show
   def index
+    @killers = Killer.all
   end
 
   def new
