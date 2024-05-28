@@ -13,7 +13,12 @@ Killer.destroy_all
 User.destroy_all
 
 puts "Create amigo imaginario"
+
 user1 = User.create(first_name: "Amigo", last_name: "Imaginario", email: "imaginario@gmail.com", password:"123456")
+
+puts "Creating killers..."
+
+user1 = User.create(first_name:"Amigo", last_name: "Imaginario", email: "imaginario@gmail.com", password:"123456")
 
 puts "Creating killers..."
 
