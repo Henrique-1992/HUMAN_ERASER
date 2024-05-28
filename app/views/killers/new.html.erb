@@ -1,2 +1,12 @@
 <h1>Killers#new</h1>
 <p>Find me in app/views/killers/new.html.erb</p>
+
+<%= simple_form_for(killer) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :picture_url %>
+  <%= f.input :description %>
+  <%= f.input :price_per_night %>
+  <%= f.input :number_of_guests %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
