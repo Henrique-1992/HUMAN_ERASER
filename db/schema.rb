@@ -31,6 +31,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_141719) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_killers_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,4 +51,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_141719) do
 
   add_foreign_key "bookings", "killers"
   add_foreign_key "bookings", "users"
+  add_foreign_key "killers", "users"
 end
