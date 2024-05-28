@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+body {
+  background-color: rgb(28, 28, 38)
+}
+
 .banner {
   background-size: contain ;
   background-position: center;
@@ -7,23 +11,34 @@
 
 .banner h1 {
   margin: 0;
-  color: red;
+  color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 55px;
+  font-size: 60px;
   font-weight: bold;
 }
 
 .banner p {
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 30;
+  font-size: 35;
   font-weight: bold;
 }
 
 .card {
+  background-color: #e6e0cf ;
   border-radius: 3px;
-  box-shadow: 0 0 5px rgb(230,230,230);
+  box-shadow: 0 0 5px rgb(15, 7, 75);
   text-align: center;
   padding: 20px;
-  border: 1px solid rgb(230,230,230);
+  border: 1px solid rgb(165, 158, 158);
+}
+
+h2.text-center.my-3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(249, 249, 250);
+}
+
+a.btn.btn-danger {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
 }
