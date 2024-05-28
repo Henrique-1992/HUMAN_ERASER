@@ -1,4 +1,5 @@
 class KillersController < ApplicationController
+  before_action :set_killer, only: :show
   def index
   end
 
@@ -11,8 +12,9 @@ class KillersController < ApplicationController
 
   def create
     @killer = Killer.new(killer_params)
+    @killer.user = current_user
     if @killer.save
-      redirect_to new_killer_path(@killer)
+      redirect_to killer_path(@killer)
     else
       render :new, status: :unprocessable_entity
     end
@@ -21,7 +23,7 @@ class KillersController < ApplicationController
   private
 
   def set_killer
-    @killer = Killer.find(params[:killer_id])
+    @killer = Killer.find(params[:id])
   end
 
   def killer_params
