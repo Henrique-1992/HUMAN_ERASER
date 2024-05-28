@@ -2,7 +2,7 @@
   <h1>Select an eraser</h1>
   <% @killers.each do |killer| %>
   <div class="card" style="width: 18rem;">
-    <img src="<%= killer.img_url %>" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
+    <img src="https://plus.unsplash.com/premium_photo-1661714112996-c782972c03e7" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
     <div class="card-body">
       <h4 class="card-title">Name: <%= "#{killer.first_name} #{killer.last_name}" %></h4>
       <p class="card-text"><%= killer.description %></p>
