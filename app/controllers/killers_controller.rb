@@ -3,6 +3,7 @@ class KillersController < ApplicationController
   end
 
   def new
+    @killer = Killer.new
   end
 
   def show
