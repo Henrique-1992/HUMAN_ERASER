@@ -7,16 +7,20 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
 puts "Cleaning database..."
 Killer.destroy_all
 User.destroy_all
 
 puts "Create amigo imaginario"
-user1 = User.create(first_name:"Amigo", last_name: "Imaginario", email: "imaginario@gmail.com", password:"123456")
+
+user1 = User.create(first_name: "Amigo", last_name: "Imaginario", email: "imaginario@gmail.com", password:"123456")
 
 puts "Creating killers..."
 
+user1 = User.create(first_name:"Amigo", last_name: "Imaginario", email: "imaginario@gmail.com", password:"123456")
 
+puts "Creating killers..."
 
 manuel = Killer.create(first_name: "Manuel", last_name: "Bessa", description: "Burglary it's his middle name. From young kids with a lollipop to an old lady walking on the streets with his wheel cart, he can steal anything quicker than a blink of an eye 😈", user_id: user1.id  )
 puts "#{manuel.first_name} created"
@@ -37,6 +41,5 @@ puts "#{ariana.first_name} created"
 
 marco = Killer.create(first_name: "Marco", last_name: "Gomes", description: "A criminal against propreties masterpiece person. He can enter in any place without being heard without any problem! Silence and discretion are his mottos. He will not leave any fingerprint in any place 🥸", user_id: user1.id )
 puts "#{marco.first_name} created"
-
 
 puts "Finished!"
