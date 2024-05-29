@@ -18,9 +18,6 @@ user1 = User.create(first_name: "Amigo", last_name: "Imaginario", email: "imagin
 
 puts "Creating killers..."
 
-user1 = User.create(first_name:"Amigo", last_name: "Imaginario", email: "imaginario@gmail.com", password:"123456")
-
-puts "Creating killers..."
 
 manuel = Killer.create(first_name: "Manuel", last_name: "Bessa", description: "Burglary it's his middle name. From young kids with a lollipop to an old lady walking on the streets with his wheel cart, he can steal anything quicker than a blink of an eye 😈", user_id: user1.id  )
 puts "#{manuel.first_name} created"
