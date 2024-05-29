@@ -14,8 +14,8 @@
         <% end %>
         <div class="card-body">
           <h4 class="card-title">Name: <%= "#{killer.first_name} #{killer.last_name}" %></h4>
-          <p class="card-text"><%= killer.description %></p>
-          <a href="#" class="card-link btn btn-danger">Book <%= killer.first_name %></a>
+          <p class="card-text"><%= "#{killer.description[0, 66]}..." %></p>
+          <%= link_to "See #{killer.first_name}'s details", killer_path(killer), class: "card-link btn btn-danger" %>
         </div>
       </div>
     </div>

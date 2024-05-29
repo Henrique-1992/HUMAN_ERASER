@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+body {
+  background-color: rgb(255, 255, 255)
+}
+
 .banner {
   background-size: contain ;
   background-position: center;
@@ -27,12 +31,8 @@ a.btn.btn-danger {
 }
 
 h2.text-center.my-3 {
-  color: rgb(255, 255, 255);
+  color: rgb(200, 8, 8);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 25px;
   font-weight: bold;
-}
-
-.banner {
-  
 }
