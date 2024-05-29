@@ -14,11 +14,11 @@ class KillersController < ApplicationController
   def create
     @killer = Killer.new(killer_params)
     @killer.user = current_user
-    if @killer.save
-      redirect_to killer_path(@killer)
-    else
-      render :new, status: :unprocessable_entity
-    end
+      if @killer.save
+       redirect_to killer_path(@killer), notice: "Yeeey! You've created a new killer"
+     else
+       render :new, status: :unprocessable_entity
+      end
   end
 
   private
@@ -28,6 +28,6 @@ class KillersController < ApplicationController
   end
 
   def killer_params
-    params.require(:killer).permit(:first_name, :last_name, :description, :rating)
+    params.require(:killer).permit(:first_name, :last_name, :description, :rating, photos: [])
   end
 end
