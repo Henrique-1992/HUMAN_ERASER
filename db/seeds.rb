@@ -18,6 +18,7 @@ user1 = User.create(first_name: "Amigo", last_name: "Imaginario", email: "imagin
 
 puts "Creating killers..."
 
+
 user1 = User.create(first_name:"Amigo", last_name: "Imaginario", email: "imaginario@gmail.com", password:"123456")
 
 puts "Creating killers..."
@@ -33,7 +34,7 @@ puts "#{uzoma.first_name} created"
 alexandru = Killer.create(first_name: "Alexandru", last_name: "Sandu", description: "Speciallist in arson. Didn't you ever think about putting fire to someone's property to feel better with yourself because he didn't pay what you owe? He can deal with gas, oil or even with a lighter he can provoke a big fire. KABOOOOOM!!! 🧨", user_id: user1.id )
 puts "#{alexandru.first_name} created"
 
-luc = Killer.create(first_name: "Luc", last_name: "Kelly", description: "Are you in some country and want someone to do a crime in another? Definitily you should hire this guy! 35 years of experience dealing with criminals around the world, specially Trafic Human. Mafia people are his best friends! 👴", user_id: user1.id )
+luc = Killer.create(first_name: "Luc", last_name: "Kelly", description: "Are you in some country and want someone to do a crime in another? Definitely you should hire this guy! 35 years of experience dealing with criminals around the world, specially Human Trafic. Mafia people are his best friends! 👴", user_id: user1.id )
 puts "#{luc.first_name} created"
 
 ariana = Killer.create(first_name: "Ariana", last_name: "Detroyes", description: "Money, money, money... who never thought about hiring a fraudster to avoid taxes? With her 15 years experience, you no longer need to worry about paying taxes! The governments will never know, so... why not hiring her? 💰💸", user_id: user1.id )
