@@ -1,6 +1,16 @@
-<h1><%= @killer.first_name %>
-  <%= @killer.last_name %></h1>
-<p><%= @killer.description %></p>
-<div class="btn btn-danger">
-  <%# create a link from index to the show page %>
-
+<div class = "killer-container">
+     <div class="cardshow">
+        <% if @killer.photos.empty? %>
+          <img src="https://plus.unsplash.com/premium_photo-1661714112996-c782972c03e7" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
+        <% else %>
+          <% @killer.photos.each do |photo| %>
+            <%= cl_image_tag photo.key %>
+          <% end %>
+        <% end %>
+        </div>
+<h1 class="killer-title"><%= @killer.first_name %>
+  <%= @killer.last_name  %> </h1>
+<div class = "killer-description"><%= @killer.description %></div>
+<div>
+<div><%=link_to "back", killers_path, class: "btn btn-danger text-black p-2 m-3"%></div>
+</div>
