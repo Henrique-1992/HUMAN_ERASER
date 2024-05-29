@@ -5,7 +5,13 @@
 
     <div class="col-sm-4 mb-4 mb-sm-4">
       <div class="card">
-        <img src="https://plus.unsplash.com/premium_photo-1661714112996-c782972c03e7" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
+        <% if killer.photos %>
+          <% killer.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height:300, width:400, crop: :fill %>
+          <% end %>
+        <% else %>
+          <img src="https://plus.unsplash.com/premium_photo-1661714112996-c782972c03e7" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
+        <% end %>
         <div class="card-body">
           <h4 class="card-title">Name: <%= "#{killer.first_name} #{killer.last_name}" %></h4>
           <p class="card-text"><%= killer.description %></p>

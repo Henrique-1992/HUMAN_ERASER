@@ -28,6 +28,6 @@ class KillersController < ApplicationController
   end
 
   def killer_params
-    params.require(:killer).permit(:first_name, :last_name, :description, :rating)
+    params.require(:killer).permit(:first_name, :last_name, :description, :rating, photos: [])
   end
 end
