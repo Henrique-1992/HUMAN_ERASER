@@ -1,13 +1,18 @@
 <div class="container">
   <h1>Select an eraser</h1>
+  <div class="row">
   <% @killers.each do |killer| %>
-  <div class="card" style="width: 18rem;">
-    <img src="https://plus.unsplash.com/premium_photo-1661714112996-c782972c03e7" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
-    <div class="card-body">
-      <h4 class="card-title">Name: <%= "#{killer.first_name} #{killer.last_name}" %></h4>
-      <p class="card-text"><%= killer.description %></p>
-      <a href="#" class="card-link">Book <%= killer.first_name %></a>
+
+    <div class="col-sm-4 mb-4 mb-sm-4">
+      <div class="card">
+        <img src="https://plus.unsplash.com/premium_photo-1661714112996-c782972c03e7" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
+        <div class="card-body">
+          <h4 class="card-title">Name: <%= "#{killer.first_name} #{killer.last_name}" %></h4>
+          <p class="card-text"><%= killer.description %></p>
+          <a href="#" class="card-link btn btn-danger">Book <%= killer.first_name %></a>
+        </div>
+      </div>
     </div>
-  </div>
   <% end %>
+  </div>
 </div>

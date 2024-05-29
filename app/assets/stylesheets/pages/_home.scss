@@ -6,14 +6,20 @@ body {
 .banner {
   background-size: contain ;
   background-position: center;
-  padding: 150px 0;
+  padding: 185px 0;
 }
 
 .banner h1 {
   margin: 0;
+<<<<<<< HEAD
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 60px;
+=======
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 65px;
+>>>>>>> 72a2b40c263cd7c3dcacc42e241eee50cca6ff8f
   font-weight: bold;
 }
 
@@ -24,6 +30,7 @@ body {
   font-weight: bold;
 }
 
+<<<<<<< HEAD
 .card {
   background-color: #e6e0cf ;
   border-radius: 3px;
@@ -40,5 +47,17 @@ h2.text-center.my-3 {
 
 a.btn.btn-danger {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+=======
+a.btn.btn-danger {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 15px;
+  font-weight:300;
+}
+
+h2.text-center.my-3 {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 25px;
+>>>>>>> 72a2b40c263cd7c3dcacc42e241eee50cca6ff8f
   font-weight: bold;
 }
