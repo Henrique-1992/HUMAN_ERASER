@@ -2,7 +2,7 @@
 .banner {
   background-size: contain ;
   background-position: center;
-  padding: 150px 0;
+  padding: 185px 0;
 }
 
 .banner h1 {
@@ -24,4 +24,11 @@ a.btn.btn-danger {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 15px;
   font-weight:300;
+}
+
+h2.text-center.my-3 {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 25px;
+  font-weight: bold;
 }
