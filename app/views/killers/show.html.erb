@@ -1,10 +1,16 @@
 <div class = "killer-container">
-<%# <%= cl_image_tag("logo_new",
-      width: 400, height: 300, crop: :fill) %>
+     <div class="card">
+        <% if @killer.photos.empty? %>
+          <img src="https://plus.unsplash.com/premium_photo-1661714112996-c782972c03e7" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
+        <% else %>
+          <% @killer.photos.each do |photo| %>
+            <%= cl_image_tag photo.key %>
+          <% end %>
+        <% end %>
+        </div>
 <h1 class="killer-title"><%= @killer.first_name %>
   <%= @killer.last_name  %> </h1>
 <div class = "killer-description"><%= @killer.description %></div>
 <div>
 <div><%=link_to "back", killers_path, class: "btn btn-danger text-black p-2 m-3"%></div>
-</div>
 </div>
