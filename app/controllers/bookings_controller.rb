@@ -1,23 +1,32 @@
 class BookingsController < ApplicationController
   before_action :set_killer, only: :create
-
-  def new
-    @booking = Booking.new
-  end
+  before_action :set_booking, only: [:confirmation]
 
   def create
-    @killer = Killer.new(killer_params)
-    @killer.user = current_user
-    if @user.save
-      redirect_to killer_path(@user)
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.killer = @killer
+    if @booking.save
+      redirect_to confirmation_path(@booking)
     else
-      render :new, status: :unprocessable_entity
+      render "killers/show", status: :unprocessable_entity
     end
+  end
+
+  def confirmation
   end
 
   private
 
-def set_killer
-  @killer = Killer.find(params[:id])
-end
+  def set_killer
+    @killer = Killer.find(params[:killer_id])
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
+  def booking_params
+    params.require(:booking).permit(:start_time, :end_time)
+  end
 end
