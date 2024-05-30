@@ -2,6 +2,16 @@ class KillersController < ApplicationController
   before_action :set_killer, only: :show
   def index
     @killers = Killer.all
+    @title = ""
+
+    if params[:query].present?
+      @killers = @killers.search_by_first_name_and_last_name_and_description(params[:query])
+      if @killers.size > 0
+        @title = "Select an Eraser"
+      else
+        @title = "Sorry, no killer found"
+      end
+    end
   end
 
   def new
