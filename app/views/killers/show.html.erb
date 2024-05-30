@@ -11,6 +11,33 @@
 <h1 class="killer-title"><%= @killer.first_name %>
   <%= @killer.last_name  %> </h1>
 <div class = "killer-description"><%= @killer.description %></div>
+
+<%= simple_form_for [@killer, @booking] do |f| %>
+<form>
+  <input class="form-control" type="datetime-local" placeholder = "Select the time">
+</form>
+<script>
+  config {
+    mode: "range",
+    minDate: "today",
+    dateFormat: "Y-m-d",
+    disable: [
+        function(date) {
+            // disable every multiple of 5
+            return !(date.getDate() % 5);
+        }
+    ]
+}
+  flatpickr("input[type=datetime-local]", config);
+</script>
+<%=f.input :start_time,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+<%=f.input :end_time,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+<%=f.button :submit, class: "btn btn-danger text-black p-2 m-3"%>
+<% end%>
 <div>
 <div><%=link_to "back", killers_path, class: "btn btn-danger text-black p-2 m-3"%></div>
 </div>
