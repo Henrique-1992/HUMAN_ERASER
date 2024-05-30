@@ -1,10 +1,14 @@
-<h1>Killers#new</h1>
-<p>Find me in app/views/killers/new.html.erb</p>
+<div class="container text-centered">
+  <h1>Create a new eraser</h1>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= render "form", killer: @killer %>
 
-<%= render "form", killer: @killer %>
+      <br>
 
-<br>
-
-<div>
-  <%= link_to "Back to killers", killers_path %>
+      <div>
+        <%= link_to "Back to killers", killers_path %>
+      </div>
+    </div>
+  </div>
 </div>
