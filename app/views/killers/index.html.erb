@@ -4,10 +4,10 @@
     <%= form_with url: killers_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
+            class: "form-control shadow ms-2 mt-2",
             placeholder: "Type a keyword"
         %>
-      <%= submit_tag "Search", name: "", class: "btn btn-danger" %>
+      <%= submit_tag "Search", name: "", class: "btn btn-danger ms-2 mt-2" %>
     <% end %>
   </div>
 </div>
