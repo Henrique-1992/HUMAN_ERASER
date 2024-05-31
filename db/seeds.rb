@@ -26,7 +26,7 @@ file5 = URI.open("https://photos.smugmug.com/C/EMPRESAS/LeWagon/n-Pmb29k/240514/
 file6 = URI.open("https://photos.smugmug.com/C/EMPRESAS/LeWagon/n-Pmb29k/240514/i-VLnpgFL/0/FWkZ9QZRGq6QvJ6JfddsVhXRVRv87tVC7Fkf6VCr4/X2/240514%20Le%20Wagon_044-X2.jpg")
 file7 = URI.open("https://photos.smugmug.com/C/EMPRESAS/LeWagon/n-Pmb29k/240514/i-925HZ74/0/p6Zdft8FxGgTB7HhDKqqX3skKjCXHPTPB3J4fJ39/X2/240514%20Le%20Wagon_035-X2.jpg")
 
-manuel = Killer.create(first_name: "Manuel", last_name: "Bessa", description: "Burglary it's his middle name. From young kids with a lollipop to an old lady walking on the streets with his wheel cart, he can steal anything quicker than a blink of an eye :smiling_imp:", specialty:"Burgling", user_id: user1.id  )
+manuel = Killer.create(first_name: "Manuel", last_name: "Bessa", description: "Burglary it's his middle name. From young kids with a lollipop to an old lady walking on the streets with his wheel cart, he can steal anything quicker than a blink of an eye 🥸", specialty:"Burgling", user_id: user1.id  )
 manuel.photos.attach(io: file1, filename: "manuel.jpg", content_type: "image/jpg")
 puts "#{manuel.first_name} created"
 
