@@ -1,3 +1,51 @@
 .confirmationbox {
-  
+  display: flex;
+  color: black ;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+  margin-top: 2%;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 7%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+  border-radius: 5px;
+  border-color: rgb(119, 136, 153);
+  box-shadow:  0 1rem 3rem rgba($black, .175);
+}
+
+.bookingconfirmationmessage {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  border-style: solid;
+  border-color: darkslategray ;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.byetitle {
+  margin-bottom: 50px;
+}
+
+.giphy-embed {
+  border-style: solid;
+  border-color: red;
+  border-width: 3px;
+
+}
+
+.bookingtitle {
+  font-size: 50px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-weight: bold;
 }
