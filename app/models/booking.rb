@@ -7,8 +7,8 @@ class Booking < ApplicationRecord
   private
 
   def end_time_is_after_start_time
-    if start_time.present? && end_time.present? && end_time < start_time
-      errors.add(:end_time, "End time is before start time")
-    end
+    return unless start_time.present? && end_time.present? && end_time < start_time
+
+    errors.add(:end_time, "End time is before start time")
   end
 end
