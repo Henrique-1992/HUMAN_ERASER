@@ -14,7 +14,7 @@
   <div class="killer-description my-5">
     <%= @killer.description %>
   </div>
-    <div class="text-black my-1 text-align-center" style="padding-left: 300px;padding-right: 300px;border-top-width: 0px;padding-bottom: 6px;height: 57.8px; font-size: 30px; font-weight: bold; ">Book your killer NOW!!!!</div>
+    <div class="text-black my-1 text-align-center" style="border-top-width: 0px;padding-bottom: 6px;height: 57.8px; font-size: 30px; font-weight: bold; ">Book your killer NOW!!!!</div>
   <div class="d-flex flex-column align-items-center justify-content-center">
     <%= simple_form_for [@killer, @booking] do |f| %>
       <div class="d-flex flex-column align-items-center justify-content-center">
@@ -26,17 +26,3 @@
     <div><%=link_to "Back", killers_path, class: "btn btn-danger text-black p-2 m-3"%></div>
   </div>
         </div>
-<h1 class="killer-title"><%= @killer.first_name %>
-  <%= @killer.last_name  %> </h1>
-<div class = "killer-description"><%= @killer.description %></div>
-
-<%= simple_form_for [@killer, @booking] do |f| %>
-  <div class="form-inputs">
-    <%= f.input :start_time, html5: true %>
-    <%= f.input :end_time, html5: true %>
-  </div>
-<%=f.button :submit, class: "btn btn-danger text-black p-2 m-3"%>
-<% end%>
-<div>
-<div><%=link_to "back", killers_path, class: "btn btn-danger text-black p-2 m-3"%></div>
-</div>

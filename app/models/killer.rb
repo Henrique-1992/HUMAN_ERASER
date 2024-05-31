@@ -8,8 +8,8 @@ class Killer < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_first_name_and_last_name_and_description_and_speciality,
-    against: [ :first_name, :last_name, :description, :specialty ],
-    using: {
-      tsearch: { prefix: true }
-    }
+                  against: %i[first_name last_name description specialty],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 end

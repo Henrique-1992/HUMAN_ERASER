@@ -4,10 +4,10 @@ class KillersController < ApplicationController
     @killers = Killer.all
     @title = "Select an Eraser"
 
-    if params[:query].present?
-      @killers = @killers.search_by_first_name_and_last_name_and_description_and_speciality(params[:query])
-      @title = "Sorry, no killer found" if @killers.empty?
-    end
+    return unless params[:query].present?
+
+    @killers = @killers.search_by_first_name_and_last_name_and_description_and_speciality(params[:query])
+    @title = "Sorry, no killer found" if @killers.empty?
   end
 
   def new
