@@ -24,17 +24,17 @@
   <% @killers.each do |killer| %>
 
     <div class="col-sm-4 mb-4 mb-sm-4">
-      <div class="card">
+      <div class="card overflow-hidden">
         <% if killer.photos.empty? %>
           <img src="https://plus.unsplash.com/premium_photo-1661714112996-c782972c03e7" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
         <% else %>
           <% killer.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height:500, width:413, crop: :fill%>
+            <%= cl_image_tag photo.key, crop: :fill, class: "object-fit-fill" %>
           <% end %>
         <% end %>
         <div class="card-body">
           <h4 class="card-title">Name: <%= "#{killer.first_name} #{killer.last_name}" %></h4>
-          <p class="card-text"><%= "#{killer.description[0, 66]}..." %></p>
+          <p class="card-text">Specialty: <%= killer.specialty %></p>
           <%= link_to "See #{killer.first_name}'s details", killer_path(killer), class: "card-link btn btn-danger" %>
         </div>
       </div>

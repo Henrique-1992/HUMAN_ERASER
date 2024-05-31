@@ -2,15 +2,11 @@ class KillersController < ApplicationController
   before_action :set_killer, only: :show
   def index
     @killers = Killer.all
-    @title = ""
+    @title = "Select an Eraser"
 
     if params[:query].present?
       @killers = @killers.search_by_first_name_and_last_name_and_description_and_speciality(params[:query])
-      if @killers.size > 0
-        @title = "Select an Eraser"
-      else
-        @title = "Sorry, no killer found"
-      end
+      @title = "Sorry, no killer found" if @killers.empty?
     end
   end
 
@@ -25,11 +21,11 @@ class KillersController < ApplicationController
   def create
     @killer = Killer.new(killer_params)
     @killer.user = current_user
-      if @killer.save
-       redirect_to killer_path(@killer), notice: "Yeeey! You've created a new killer"
-     else
-       render :new, status: :unprocessable_entity
-      end
+    if @killer.save
+      redirect_to killer_path(@killer), notice: "Yeeey! You've created a new killer"
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
