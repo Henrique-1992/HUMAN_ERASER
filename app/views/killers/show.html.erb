@@ -1,12 +1,30 @@
 <div class = "killer-container">
-     <div class="cardshow">
-        <% if @killer.photos.empty? %>
-          <img src="https://plus.unsplash.com/premium_photo-1661714112996-c782972c03e7" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
-        <% else %>
-          <% @killer.photos.each do |photo| %>
-            <%= cl_image_tag photo.key %>
-          <% end %>
+  <div class="d-flex gap-5 w-100 align-items-center">
+    <div class="cardshow">
+      <% if @killer.photos.empty? %>
+        <img src="https://plus.unsplash.com/premium_photo-1661714112996-c782972c03e7" class="card-img-top" alt="<%= "#{killer.first_name} #{killer.last_name} picture" %>">
+      <% else %>
+        <% @killer.photos.each do |photo| %>
+          <%= cl_image_tag photo.key %>
         <% end %>
+      <% end %>
+    </div>
+    <h1 class="killer-title"><%= @killer.first_name %> <%= @killer.last_name  %></h1>
+  </div>
+  <div class="killer-description my-5">
+    <%= @killer.description %>
+  </div>
+    <div class="text-black my-1 text-align-center" style="padding-left: 300px;padding-right: 300px;border-top-width: 0px;padding-bottom: 6px;height: 57.8px; font-size: 30px; font-weight: bold; ">Book your killer NOW!!!!</div>
+  <div class="d-flex flex-column align-items-center justify-content-center">
+    <%= simple_form_for [@killer, @booking] do |f| %>
+      <div class="d-flex flex-column align-items-center justify-content-center">
+        <%= f.input :start_time, html5: true %>
+        <%= f.input :end_time, html5: true %>
+        <%=f.button :submit, class: "btn btn-danger text-black p-2 m-3"%>
+      </div>
+    <% end %>
+    <div><%=link_to "Back", killers_path, class: "btn btn-danger text-black p-2 m-3"%></div>
+  </div>
         </div>
 <h1 class="killer-title"><%= @killer.first_name %>
   <%= @killer.last_name  %> </h1>

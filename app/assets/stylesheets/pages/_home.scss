@@ -34,8 +34,35 @@ body {
 }
 
 h2.text-center.my-3 {
-  color: rgb(200, 8, 8);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  color: rgb(0, 0, 0);
   font-size: 25px;
-  font-weight: bold;
+}
+
+
+
+
+.home-image-container {
+  display: flex;
+  gap: 20px;
+  margin: 35px;
+}
+
+.home-image-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3;
+}
+
+.home-image-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.home-image-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12 24 rgba(0,0,0,0.2);
 }

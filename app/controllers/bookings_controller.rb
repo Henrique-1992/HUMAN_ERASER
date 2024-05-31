@@ -5,6 +5,9 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+
+    if @user.save
+      redirect_to killer_path(@user)
     @booking.killer = @killer
     if @booking.save
       redirect_to confirmation_path(@booking)
@@ -18,6 +21,12 @@ class BookingsController < ApplicationController
 
   private
 
+
+def set_killer
+  @booking = Killer.find(params[:id])
+end
+def booking_params
+end
   def set_killer
     @killer = Killer.find(params[:killer_id])
   end
