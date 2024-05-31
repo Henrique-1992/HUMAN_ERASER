@@ -1,13 +1,11 @@
 <div class="container text-centered">
-  <h1>Create a new eraser</h1>
-  <div class="row">
+  <h1 class="text-center mt-5 mb-4">Create a new eraser</h1>
+  <div class="row justify-content-center">
     <div class="col-sm-6">
       <%= render "form", killer: @killer %>
 
-      <br>
-
       <div>
-        <%= link_to "Back to killers", killers_path %>
+        <%= link_to "Back to killers", killers_path, class: "fw-bold text-black" %>
       </div>
     </div>
   </div>
