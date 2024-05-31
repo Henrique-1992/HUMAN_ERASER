@@ -5,7 +5,7 @@ class KillersController < ApplicationController
     @title = ""
 
     if params[:query].present?
-      @killers = @killers.search_by_first_name_and_last_name_and_description(params[:query])
+      @killers = @killers.search_by_first_name_and_last_name_and_description_and_speciality(params[:query])
       if @killers.size > 0
         @title = "Select an Eraser"
       else

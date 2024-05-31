@@ -25,4 +25,18 @@
     <% end %>
     <div><%=link_to "Back", killers_path, class: "btn btn-danger text-black p-2 m-3"%></div>
   </div>
+        </div>
+<h1 class="killer-title"><%= @killer.first_name %>
+  <%= @killer.last_name  %> </h1>
+<div class = "killer-description"><%= @killer.description %></div>
+
+<%= simple_form_for [@killer, @booking] do |f| %>
+  <div class="form-inputs">
+    <%= f.input :start_time, html5: true %>
+    <%= f.input :end_time, html5: true %>
+  </div>
+<%=f.button :submit, class: "btn btn-danger text-black p-2 m-3"%>
+<% end%>
+<div>
+<div><%=link_to "back", killers_path, class: "btn btn-danger text-black p-2 m-3"%></div>
 </div>

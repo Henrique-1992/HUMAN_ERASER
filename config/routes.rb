@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :killers do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:create]
   end
+  get "bookings/:id", to: "bookings#confirmation", as: :confirmation
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
